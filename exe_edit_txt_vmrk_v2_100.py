@@ -119,7 +119,7 @@ def processar_dados(dir_path, excel_path, extensao_arquivo):
 
 # Criar a janela principal
 root = tk.Tk()
-root.title("Makeasy EGG - Editor de Markers (v1.75) - by onurB")
+root.title("Makeasy EEG - Editor de Markers (v1.75) - by onurB")
 
 icone = Image.open("C:\\Users\\bruno_mwax2\\Documents\\0. Scripts\\Logo_gpmc.ico")
 imagem = ImageTk.PhotoImage(icone)
