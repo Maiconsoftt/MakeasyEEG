@@ -1,8 +1,8 @@
 import os
+import time
 import pandas as pd
 import tkinter as tk
 from tkinter import filedialog, OptionMenu, messagebox, ttk
-import time
 from PIL import Image, ImageTk
 
 def loading_window(files):
@@ -10,7 +10,7 @@ def loading_window(files):
     loading_window.title("Processando arquivos...")
 
     # Barra de progresso
-    progress_label = tk.Label(loading_window, text="Processando arquivos:")
+    progress_label = tk.Label(loading_window, text="Processando arquivo:")
     progress_label.pack()
 
     progress_bar = ttk.Progressbar(loading_window, orient="horizontal", length=300, mode="determinate")
@@ -89,7 +89,7 @@ def processar_dados(dir_path, excel_path, extensao_arquivo):
         updated_lines = []
         
         if extensao_arquivo == '.txt':
-            novos_valores_formatados = ['    ' + str(valor) for valor in df_excel[coluna_excel].tolist()]
+            novos_valores_formatados = ['     ' + str(valor) for valor in df_excel[coluna_excel].tolist()]
         else:
             # Carrega a coluna específica do Excel para esse arquivo
             novos_valores_formatados = ['' + str(valor) for valor in df_excel[coluna_excel].tolist()]
