@@ -172,7 +172,7 @@ frame_menu = tk.Frame(root)
 frame_menu.grid(row=3, column=0, padx=10, pady=5, sticky='n')
 
 # Widgets e Layout
-tk.Label(root, text="Selecione a pasta contendo os arquivos .txt ou .vmrk:", width=65).grid(column=0, row=1, pady=4)
+tk.Label(root, text="Selecione a pasta contendo os arquivos .txt, .vmrk ou .markers:", width=65).grid(column=0, row=1, pady=4)
 entry_pasta = tk.Entry(root, width=64)
 entry_pasta.grid(column=0, row=2)
 tk.Button(frame_menu, text="Selecionar Pasta", command=obter_caminho_pasta).grid(row=0, column=0)  # Adicionando o botão ao frame
@@ -195,7 +195,7 @@ entry_valor_procurado = tk.Entry(root, width=10)
 entry_valor_procurado.grid(column=0, row=31, pady=3)
 
 # Menu suspenso para selecionar a extensão do arquivo
-extensao_menu = OptionMenu(frame_menu, extensao_arquivo_var, '.txt', '.vmrk')
+extensao_menu = OptionMenu(frame_menu, extensao_arquivo_var, '.txt', '.vmrk', '.MARKERS')
 extensao_menu.grid(row=0, column=1, padx=(5, 0))  # Adicionando o menu suspenso ao frame
 
 tk.Button(root, font=(12), text="Executar", 
